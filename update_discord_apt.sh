@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -f discord.deb]; then
+if [ -f discord.deb ]; then
 	rm discord.deb
 fi
 
