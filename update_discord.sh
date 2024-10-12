@@ -10,8 +10,8 @@ if [ -f ~/.local/share/applications/discord.desktop ]; then
 	sudo rm ~/.local/share/applications/discord.desktop
 fi
 
-baseurl=$(curl "https://discord.com/api/download?platform=linux&format=tar.gz" | grep -Po "\"https:\/\/dl\.discordapp\.net\/apps\/linux\/(\d+\.\d+\.\d+)")
-version=${baseurl:38}
+baseurl=$(curl "https://discord.com/api/download?platform=linux&format=tar.gz" | grep -Po "\"https:\/\/stable\.dl2\.discordapp\.net\/apps\/linux\/([\d\.]+)")
+version=${baseurl:46}
 
 newurl="${baseurl:1}/discord-${version}.tar.gz"
 
